@@ -60,7 +60,7 @@ class WeatherInfo {
     }
     catch (RequestException $e) {
       watchdog_exception('pdg_weather', $e->getMessage());
-      return ($this->t('Error'));
+      return ($this->t('Error in fetching weather data.'));
     }
   }
 
