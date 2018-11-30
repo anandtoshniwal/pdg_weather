@@ -79,7 +79,7 @@ class weather extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
 
-    $this->configuration['weatherInfo_data'] = $form_state->getValue('city_name');
+    $this->configuration['city_name'] = $form_state->getValue('city_name');
   }
 
   /**
@@ -87,7 +87,7 @@ class weather extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
 
-    $response = $this->weatherInfo->weatherData($this->configuration['weatherInfo_data']);
+    $response = $this->weatherInfo->weatherData($this->configuration['city_name']);
     if (!empty($response)) {
       return [
         '#type' => 'markup',
