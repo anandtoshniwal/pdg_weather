@@ -1,0 +1,4 @@
+services:  
+  pdg_weather.weather_info:
+    class: Drupal\pdg_weather\WeatherInfo
+    arguments: ['@http_client', '@config.factory']

@@ -1,0 +1,7 @@
+pdg_weather.admin_settings_form:
+  path: '/admin/weather-config'
+  defaults:
+    _form: '\Drupal\pdg_weather\Form\WeatherConfig'
+    _title: 'Weather config'
+  requirements:
+    _permission: 'administer site configuration'

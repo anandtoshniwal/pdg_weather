@@ -1,0 +1,6 @@
+name: Weather block
+description: Provides Weather details as per given city.
+package: PDG
+
+type: module
+core: 8.x
